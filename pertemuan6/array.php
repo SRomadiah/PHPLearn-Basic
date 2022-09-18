@@ -1,18 +1,48 @@
-<?php
-// materi saat ini adalah lanjutan dari pertemuan ke 5
-// review membuat array 
+<!DOCTYPE html>
+<html lang="en">
 
-// cara lama 
-$hari = array("Senin", "Selasa", "Rabu");
-$bulan = ["Jan", "Feb", "Mart"];
-$arr = [123, "teks", true];
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan</title>
+  <style>
+    .kotak {
+      width: 30px;
+      height: 30px;
+      background-color: burlywood;
+      text-align: center;
+      margin: 3px;
+      float: left;
+      transition: .5s;
+    }
 
-// menampilkan array 
+    .kotak:hover {
+      transform: rotate(90deg);
+    }
 
-var_dump($hari);
-echo "<br>";
-print_r($bulan);
-echo "<br>";
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
 
-// menampilkan 1 elemen array 
-echo $hari[2];
+<body>
+
+  <?php
+  $angka = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  ?>
+  <?php foreach ($angka as $i) : ?>
+    <?php foreach ($i as $value) : ?>
+      <div class="kotak"><?= $value; ?></div>
+    <?php endforeach; ?>
+    <div class="clear"></div>
+  <?php endforeach; ?>
+
+</body>
+
+</html>
