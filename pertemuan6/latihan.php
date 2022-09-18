@@ -7,20 +7,27 @@
 // definisinya sama seperti array numerik
 // key-nya adalah strng yang kita buat 
 // dlam array associative di perbolehkan tidak sesuai urutan asalkan key stringnya tepat
-$mahasiswa = [
+$dataPeminjaman = [
   [
     "Nama" => "Romadiah",
     "NIM" => "21101198",
-    "Email" => "romadiah@gmail.com",
+    "Judul" => "Algorithm",
     "Jurusan" => "Teknologi Informatika",
-    "Gambar" => "photo1.jpg"
+    "Gambar" => "algorithm.jpg"
   ],
   [
     "Nama" => "Taniamelia",
     "NIM" => "21101176",
-    "Email" => "taniamelia@gmail.com",
+    "Judul" => "Basis Data",
     "Jurusan" => "Teknologi Informatika",
-    "Gambar" => "photo2.jpg"
+    "Gambar" => "basisdata.jpg"
+  ],
+  [
+    "Nama" => "Ferdi",
+    "NIM" => "21101176",
+    "Judul" => "Basis Data",
+    "Jurusan" => "Teknologi Informatika",
+    "Gambar" => "basisdata.jpg"
   ]
 ];
 // echo $mahasiswa[1]["Nilai"][2];
@@ -37,14 +44,14 @@ $mahasiswa = [
 
 <body>
   <h1>Daftar Mahasiswa </h1>
-  <?php foreach ($mahasiswa as $data) : ?>
-    <ul>
+  <?php foreach ($dataPeminjaman as $data) : ?>
+    <ul style="list-style-type:none;">
       <li>
         <img src="img/<?= $data["Gambar"]; ?>">
       </li>
       <li>Nama: <?= $data["Nama"]; ?></li>
       <li>NIM: <?= $data["NIM"]; ?></li>
-      <li>Email: <?= $data["Email"]; ?></li>
+      <li>Email: <?= $data["Judul"]; ?></li>
       <li>Jurusan: <?= $data["Jurusan"]; ?></li>
     </ul>
   <?php endforeach; ?>
