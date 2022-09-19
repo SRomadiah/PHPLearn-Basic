@@ -1,3 +1,20 @@
+<?php
+// cek apakah tidak ada data di $_GET
+// memaksa user berpindah ke page lain 
+if (
+  !isset($_GET["nama"]) ||
+  !isset($_GET["nim"]) ||
+  !isset($_GET["judul"]) ||
+  !isset($_GET["jurusan"]) ||
+  !isset($_GET["gambar"])
+) {
+  // redirect (memindahkan user dari halaman ke halaman lain)
+  header("Location: latihan.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

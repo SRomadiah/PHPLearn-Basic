@@ -8,7 +8,8 @@
 
 // superglobals 
 // $_GET 
-
+// metode request GET adalah metode pengiriman data melalui url dan data tersebut bisa di ambil
+// atau di tangkap oleh melalui variabel superglobal $_GET
 $dataPeminjaman = [
   [
     "Nama" => "Romadiah",
